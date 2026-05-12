@@ -6,7 +6,24 @@
             "ol",
             "li",
             "renderer",
-            "commonmark"
+            "commonmark",
+            "oddfellows",
+            "testbench",
+            "pest",
+            "phpstan",
+            "rector",
+            "spatie",
+            "laravel",
+            "package-tools",
+            "pint",
+            "collision",
+            "orchestra",
+            "peckphp",
+            "pestphp",
+            "phpunit",
+            "roave",
+            "security-advisories",
+            "ray"
         ],
         "paths": []
     }
