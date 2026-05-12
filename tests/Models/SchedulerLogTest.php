@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Oddfellows\OddfellowsTest2LogPackage\Models\SchedulerLog;
+
+uses(RefreshDatabase::class);
 
 describe('SchedulerLog Model', function (): void
 {
@@ -19,9 +22,11 @@ describe('SchedulerLog Model', function (): void
         expect($log)->toBeInstanceOf(SchedulerLog::class);
         expect($log->command)->toBe('inspire');
         expect($log->status)->toBe('success');
+        expect(SchedulerLog::count())->toBe(1);
+        expect($log->created_at)->not()->toBeNull();
     });
 
-    it('casts attributes correctly', function (): void
+    it('casts duration and exit_code correctly', function (): void
     {
         $log = SchedulerLog::create([
             'command'     => 'inspire',
@@ -36,25 +41,25 @@ describe('SchedulerLog Model', function (): void
         expect($log->exit_code)->toBeInt();
     });
 
-    it('can query successful logs', function (): void
+    it('filters successful logs using the successful scope', function (): void
     {
-        SchedulerLog::create(['command' => 'test1', 'status' => 'success', 'hostname' => 'localhost']);
-        SchedulerLog::create(['command' => 'test2', 'status' => 'failed', 'hostname' => 'localhost']);
-        SchedulerLog::create(['command' => 'test3', 'status' => 'success', 'hostname' => 'localhost']);
+        SchedulerLog::create(['command' => 'task:one', 'status' => 'success', 'hostname' => 'localhost']);
+        SchedulerLog::create(['command' => 'task:two', 'status' => 'failed', 'hostname' => 'localhost']);
+        SchedulerLog::create(['command' => 'task:three', 'status' => 'success', 'hostname' => 'localhost']);
 
-        $successful = SchedulerLog::successful()->get();
+        $successful = SchedulerLog::successful()->orderBy('command')->pluck('command')->all();
 
-        expect($successful)->toHaveCount(2);
+        expect($successful)->toEqual(['task:one', 'task:three']);
     });
 
-    it('can query failed logs', function (): void
+    it('filters failed logs using the failed scope', function (): void
     {
-        SchedulerLog::create(['command' => 'test1', 'status' => 'success', 'hostname' => 'localhost']);
-        SchedulerLog::create(['command' => 'test2', 'status' => 'failed', 'hostname' => 'localhost']);
-        SchedulerLog::create(['command' => 'test3', 'status' => 'success', 'hostname' => 'localhost']);
+        SchedulerLog::create(['command' => 'task:one', 'status' => 'success', 'hostname' => 'localhost']);
+        SchedulerLog::create(['command' => 'task:two', 'status' => 'failed', 'hostname' => 'localhost']);
+        SchedulerLog::create(['command' => 'task:three', 'status' => 'success', 'hostname' => 'localhost']);
 
-        $failed = SchedulerLog::failed()->get();
+        $failed = SchedulerLog::failed()->pluck('command')->all();
 
-        expect($failed)->toHaveCount(1);
+        expect($failed)->toEqual(['task:two']);
     });
 });

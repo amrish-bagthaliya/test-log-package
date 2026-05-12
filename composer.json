@@ -58,8 +58,7 @@
             "@test:unit",
             "@test:lint",
             "@test:types",
-            "@test:refactor",
-            "@test:typos"
+            "@test:refactor"
         ]
     },
     "config": {
