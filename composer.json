@@ -1,11 +1,11 @@
 {
-    "name": "manchester-unity/:package_slug",
-    "description": ":package_description",
+    "name": "manchester-unity/oddfellows-test2-log-package",
+    "description": "This is my package oddfellows-test2-log-package",
     "license": "proprietary",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "amrish-bagthaliya",
+            "email": "amrish-bagthaliya@oddfellows.co.uk",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\PackageNamespace\\": "src/",
-            "VendorName\\PackageNamespace\\Database\\Factories\\": "database/factories/"
+            "Oddfellows\\OddfellowsTest2LogPackage\\": "src/",
+            "Oddfellows\\OddfellowsTest2LogPackage\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\PackageNamespace\\Tests\\": "tests/"
+            "Oddfellows\\OddfellowsTest2LogPackage\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -49,7 +49,7 @@
         "analyse": "vendor/bin/phpstan analyse",
         "lint" : "pint",
         "refactor" : "rector",
-        "test:unit" : "pest --parallel --coverage --exactly=100",
+        "test:unit" : "pest --parallel",
         "test:types" : "phpstan",
         "test:lint" : "pint --test",
         "test:typos" : "peck",
@@ -72,10 +72,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\PackageNamespace\\SkeletonServiceProvider"
+                "Oddfellows\\OddfellowsTest2LogPackage\\Test2LogPackageServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\PackageNamespace\\Facades\\Skeleton"
+                "Test2LogPackage": "Oddfellows\\OddfellowsTest2LogPackage\\Facades\\Test2LogPackage"
             }
         }
     },

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace VendorName\PackageNamespace\Database\Factories;
+namespace Oddfellows\OddfellowsTest2LogPackage\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
