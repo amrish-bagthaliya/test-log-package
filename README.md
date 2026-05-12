@@ -1,6 +1,6 @@
 # Oddfellows Test2 Log Package
 
-[![run-tests](hhttps://github.com/amrish-bagthaliya/test-log-package/actions/workflows/run-tests.yml/badge.svg)](https://github.com/amrish-bagthaliya/test-log-package/actions/workflows/run-tests.yml)
+[![run-tests](https://github.com/amrish-bagthaliya/test-log-package/actions/workflows/run-tests.yml/badge.svg)](https://github.com/amrish-bagthaliya/test-log-package/actions/workflows/run-tests.yml)
 [![lint-test](https://github.com/amrish-bagthaliya/test-log-package/actions/workflows/lint-test.yml/badge.svg)](https://github.com/amrish-bagthaliya/test-log-package/actions/workflows/lint-test.yml)
 [![PHPStan](https://github.com/amrish-bagthaliya/test-log-package/actions/workflows/phpstan.yml/badge.svg)](https://github.com/amrish-bagthaliya/test-log-package/actions/workflows/phpstan.yml)
 
