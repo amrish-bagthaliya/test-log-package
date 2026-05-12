@@ -19,7 +19,7 @@ class SchedulerLog extends Model
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<string>
+     * @var list<string>
      */
     protected $fillable = [
         'command',
@@ -47,6 +47,9 @@ class SchedulerLog extends Model
 
     /**
      * Get successful logs.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
      */
     public function scopeSuccessful(Builder $query): Builder
     {
@@ -55,6 +58,9 @@ class SchedulerLog extends Model
 
     /**
      * Get failed logs.
+     *
+     * @param  Builder<static>  $query
+     * @return Builder<static>
      */
     public function scopeFailed(Builder $query): Builder
     {
