@@ -1,13 +1,13 @@
-# :package_description
+# This is my package oddfellows-test2-log-package
 
-[![run-tests](https://github.com/manchester-unity/:package_slug/actions/workflows/run-tests.yml/badge.svg)](https://github.com/manchester-unity/:package_slug/actions/workflows/run-tests.yml)
-[![lint-test](https://github.com/manchester-unity/:package_slug/actions/workflows/lint-test.yml/badge.svg)](https://github.com/manchester-unity/:package_slug/actions/workflows/lint-test.yml)
-[![PHPStan](https://github.com/manchester-unity/:package_slug/actions/workflows/phpstan.yml/badge.svg)](https://github.com/manchester-unity/:package_slug/actions/workflows/phpstan.yml)
+[![run-tests](https://github.com/manchester-unity/oddfellows-test2-log-package/actions/workflows/run-tests.yml/badge.svg)](https://github.com/manchester-unity/oddfellows-test2-log-package/actions/workflows/run-tests.yml)
+[![lint-test](https://github.com/manchester-unity/oddfellows-test2-log-package/actions/workflows/lint-test.yml/badge.svg)](https://github.com/manchester-unity/oddfellows-test2-log-package/actions/workflows/lint-test.yml)
+[![PHPStan](https://github.com/manchester-unity/oddfellows-test2-log-package/actions/workflows/phpstan.yml/badge.svg)](https://github.com/manchester-unity/oddfellows-test2-log-package/actions/workflows/phpstan.yml)
 
 ---
 This repo can be used to scaffold a Laravel package. Follow these steps to get started:
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
+1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this oddfellows-test2-log-package.
 2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
 3. Have fun creating your package.
 4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
@@ -20,20 +20,20 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require manchester-unity/:package_slug
+composer require manchester-unity/oddfellows-test2-log-package
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
+php artisan vendor:publish --tag="oddfellows-test2-log-package-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
+php artisan vendor:publish --tag="oddfellows-test2-log-package-config"
 ```
 
 This is the contents of the published config file:
@@ -46,14 +46,14 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
+php artisan vendor:publish --tag="oddfellows-test2-log-package-views"
 ```
 
 ## Usage
 
 ```php
-$:variable = new VendorName\PackageNamespace\Skeleton();
-echo $:variable->echoPhrase('Hello, VendorName!');
+$test2LogPackage = new Oddfellows\OddfellowsTest2LogPackage\Test2LogPackage();
+echo $test2LogPackage->echoPhrase('Hello, Oddfellows!');
 ```
 
 ## Testing
@@ -69,7 +69,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Versioning
 
-The package follows [Semantic Versioning 2.0.0](https://semver.org). Pin a major version in `composer.json` (`"manchester-unity/:package_slug": "^1.0"`) to receive bug fixes and minor features without breaking changes.
+The package follows [Semantic Versioning 2.0.0](https://semver.org). Pin a major version in `composer.json` (`"manchester-unity/oddfellows-test2-log-package": "^1.0"`) to receive bug fixes and minor features without breaking changes.
 
 ## License
 
